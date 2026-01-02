@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- **SARARA KANA MIRKANEESSII** -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BHU Cafeteria System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<canvas id="snow-canvas"></canvas>
+
+<!-- WELCOME SCREEN -->
+<div id="welcome-screen">
+    <div class="welcome-content">
+        <h1>
+            <span class="welcome-emoji">👨‍🎓</span>
+                <span class="welcome-title-black" data-key="welcome_part1">Welcome to</span>
+                <span class="welcome-title-red" data-key="welcome_part2">BHU</span>
+                <span class="welcome-title-white" data-key="welcome_part3">Students</span>
+                <span class="welcome-emoji">👩‍🎓</span>
+
+        </h1>
+        <p data-key="welcome_subtitle">Your Modern Cafeteria Management System</p>
+        <button id="enter-app-btn" data-key="enter_system_btn">Enter Cafeteria System</button>
+    </div>
+</div>
+
+<!-- SESSION SELECTION SCREEN -->
+<div id="session-selection-screen" class="hidden">
+    <h1 data-key="select_session_title">Select Meal Session</h1>
+    <div class="session-selector">
+        <button class="session-btn" data-session="breakfast"><span>🥐</span><span data-key="session_breakfast">Breakfast</span></button>
+        <button class="session-btn" data-session="lunch"><span>🍔</span><span data-key="session_lunch">Lunch</span></button>
+        <button class="session-btn" data-session="dinner"><span>🍝</span><span data-key="session_dinner">Dinner</span></button>
+    </div>
+</div>
+<br>
+<br>
+<!-- MAIN APPLICATION WRAPPER -->
+<div id="app-wrapper" class="hidden">
+    <header>
+        <div class="header-content">
+            <div id="hamburger-menu-icon" class="hamburger-icon">&#9776;</div>
+            <h1>
+                <span class="title-black" data-key="title_part1">BHU</span>
+                <span class="title-red" data-key="title_part2">Student</span>
+                <span class="title-white" data-key="title_part3">Cafeteria System</span>
+            </h1>
+            <div class="top-right-controls">
+                <div id="live-clock">00:00:00 AM</div>
+                <div id="back-to-session-btn" class="back-icon" title="Back to Session Select">↩️</div>
+            </div>
+        </div>
+        <nav class="main-nav">
+            <button id="nav-home" class="active"><span>🏠</span><span data-key="nav_home">Home</span></button>
+            <button id="nav-list"><span>📊</span><span data-key="nav_dashboard">Dashboard</span></button>
+            <button id="nav-reating"><span>⚠️</span><span data-key="nav_reattempts">Attempts</span></button>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home-page" class="page active">
+            <div class="input-form-container">
+                <h2 id="current-session-title"></h2>
+                <div class="id-input-group">
+                    <input type="text" id="id-part1" maxlength="4" pattern="[0-9]*" inputmode="numeric" placeholder="0000" autofocus>
+                    <span>/</span>
+                    <input type="text" id="id-part2" maxlength="2" pattern="[0-9]*" inputmode="numeric" placeholder="16">
+                    <button id="year-lock-btn">🔓</button>
+                </div>
+                <div class="getin-btn-container">
+                    <button id="get-in-btn" data-key="getin_btn">Get-in</button>
+                </div>
+            </div>
+            <div id="message-display"></div>
+            <div id="home-recent-entries" class="recent-entries-wrapper"></div>
+        </section>
+        <section id="list-page" class="page"></section>
+        <section id="reating-page" class="page"></section>
+    </main>
+</div>
+
+<!-- SIDE MENU -->
+<div id="side-menu" class="side-menu">
+    <a href="javascript:void(0)" class="close-btn" id="close-side-menu">&times;</a>
+    <h2 data-key="settings_title">Settings</h2>
+    <div class="menu-item theme-switcher">
+        <label for="theme-toggle"><span>🌙</span><span data-key="dark_mode">Dark Mode</span></label>
+        <label class="switch  "><input type="checkbox" id="theme-toggle"><span class="slider round"></span></label>
+    </div>
+    <div class="menu-item">
+        <label for="lang-select"><span>🌐</span><span data-key="language_title">Language:</span></label>
+        <select id="lang-select">
+            <option value="om">Afaan Oromoo</option>
+            <option value="en" selected>English</option>
+            <option value="am">አማርኛ</option>
+        </select>
+    </div>
+
+
+    <div class="menu-item">
+        <button id="restart-btn" class="danger"><span>🔄</span><span data-key="restart_btn">Clear All Data</span></button>
+    </div>
+    <div class="menu-item">
+        <button id="about-btn"><span>ℹ️</span><span data-key="about_btn">About</span></button>
+    </div>
+    <div class="menu-item">
+        <button id="help-btn"><span>❓</span><span data-key="help_btn">Help</span></button>
+    </div>
+    <div class="menu-item">
+        <button id="contacts-btn"><span>📞</span><span data-key="contacts_btn">Contacts</span></button>
+    </div>
+</div>
+
+<!-- MODALS -->
+<div id="about-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal-btn">&times;</span>
+        <h2 data-key="about_modal_title">About the BHU Cafeteria System</h2>
+        <h3 data-key="about_background_title">Project Background</h3>
+        <p data-key="about_background_content">This system was created to solve a critical problem at the Bule Hora University cafeteria: resource and time wastage during power outages. The previous manual, paper-based system led to unauthorized repeat meals and long queues. This digital solution ensures fairness, speed, and accuracy, even without electricity or internet.</p>
+        <h3 data-key="about_mission_title">Our Mission</h3>
+        <p data-key="about_mission_content">To provide a fair, efficient, and modern solution to eliminate food wastage and reduce waiting times at the Bule Hora University cafeteria, ensuring a better experience for both students and staff.</p>
+        <h3 data-key="about_p1">Developed By:</h3>
+        <p>Computer Science and Engineering Students</p>
+        <ul>
+            <li>BIRUK TADESSE (OWNER)</li>
+            <li>YALFAL BELETE</li>
+            <li>LELISA BELAMA</li>
+            <li>BILISUMA BAYISA</li>
+            <li>DAGMAWIT MEKURIA</li>
+        </ul>
+    </div>
+</div>
+
+<div id="help-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal-btn">&times;</span>
+        <h2 data-key="help_title">How to Use the System</h2>
+        <h3 data-key="help_section1_title">1. Getting Started</h3>
+        <p data-key="help_section1_content">When the application first opens, you will see a welcome screen. Click "Enter Cafeteria System" to proceed to the meal selection screen.</p>
+        <h3 data-key="help_section2_title">2. Daily Operation</h3>
+        <ol>
+            <li data-key="help_step1"><strong>Select Session:</strong> Choose Breakfast, Lunch, or Dinner from the selection screen.</li>
+            <li data-key="help_step2"><strong>Set Year (Optional):</strong> The year input (e.g., /16) can be changed. To fix it for all students, type the year and then click the lock icon (🔓) to lock it (🔒).</li>
+            <li data-key="help_step3"><strong>Enter Student ID:</strong> Type the student's 4-digit ID number and click the "Get-in" button.</li>
+            <li data-key="help_step4"><strong>Check Status:</strong> A green message means success. A red, vibrating message means the student has already eaten.</li>
+            <li data-key="help_step5"><strong>View Recent Entries:</strong> The last 10 successful entries appear at the bottom for quick verification.</li>
+        </ol>
+        <h3 data-key="help_section3_title">3. Using the Side Menu (☰)</h3>
+        <ul>
+            <li data-key="help_menu_dark"><strong>Dark Mode:</strong> Toggle for a comfortable view in low light.</li>
+            <li data-key="help_menu_lang"><strong>Language:</strong> Switch between English, Afaan Oromoo, and Amharic.</li>
+            <li data-key="help_menu_clear"><strong>Clear All Data:</strong> This will completely erase all saved records. Use with caution.</li>
+            <li data-key="help_menu_back"><strong>Back Arrow (↩️):</strong> Use the back arrow in the top-right to return to the meal selection screen without losing any data.</li>
+        </ul>
+    </div>
+</div>
+
+<div id="contacts-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal-btn">&times;</span>
+        <h2 data-key="contacts_title">Contact the Developers</h2>
+        <div class="contact-links">
+            <a href="https://www.youtube.com/@biruk-tad" target="_blank" rel="noopener noreferrer">
+                <img src="https://img.icons8.com/color/48/000000/youtube-play.png" alt="YouTube">
+            </a>
+            <a href="https://t.me/BHU_Info_col_9" target="_blank" rel="noopener noreferrer">
+                <img src="https://img.icons8.com/fluency/48/000000/telegram-app.png" alt="Telegram Group">
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=61564927622966" target="_blank" rel="noopener noreferrer">
+                <img src="https://img.icons8.com/color/48/000000/facebook-new.png" alt="Facebook">
+            </a>
+            <a href="https://t.me/Brex2217" target="_blank" rel="noopener noreferrer">
+                <img src="https://img.icons8.com/color/48/000000/telegram-app.png" alt="Telegram Owner">
+            </a>
+        </div>
+    </div>
+</div>
+
+<div id="restart-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal-btn">&times;</span>
+        <h2 data-key="restart_warning_title">Final Warning!</h2>
+        <p data-key="restart_warning_text">Are you sure you want to restart the system? All currently saved data (served students, re-eating attempts) will be permanently deleted. This action cannot be undone.</p>
+        <div class="modal-buttons">
+            <button class="modal-btn cancel" data-key="cancel_btn">Cancel</button>
+            <button class="modal-btn danger" id="confirm-restart-btn" data-key="confirm_restart_btn">Yes, Restart</button>
+        </div>
+    </div>
+</div>
+<!-- Firebase SDK (Software Development Kits) -->
+<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore-compat.js"></script>
+<script>
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyAlZaGjtxButu9suhEdpXuVSHg14nqw9o0",
+      authDomain: "bhu-cafe.firebaseapp.com",
+      projectId: "bhu-cafe",
+      storageBucket: "bhu-cafe.appspot.com",
+      messagingSenderId: "382781834778",
+      appId: "1:382781834778:web:1b379ca1859448d7beb3a3"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+</script>
+<script src="script.js"></script>
+</body>
+</html>
