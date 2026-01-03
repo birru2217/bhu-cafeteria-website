@@ -108,6 +108,6 @@ Follow these steps to get the web application running on your local machine.
 
 A dedicated Android version of this project, which wraps this web application in a `WebView`, is also available. This provides a more native experience for mobile users.
 
-➡️ **[View andd download the mobile Application Repository Here](https://github.com/birru2217/bhu-cafeteria-android-app)** 
+➡️ **[View and download the mobile Application Repository Here](https://github.com/birru2217/bhu-cafeteria-android-app)** 
 
 ---
