@@ -1,141 +1,119 @@
-# BHU Student Cafeteria System ☕
+# BHU Student Cafeteria System (Web Application) ☕
 
-**A modern, offline-first, and server-connected solution designed to eliminate fraud and streamline meal services at Bule Hora University.**
+Welcome to the official repository for the **BHU Student Cafeteria System**, a modern, offline-first, and server-connected web application designed to eliminate fraud and streamline meal services at Bule Hora University.
 
-This project transitions the university's manual, paper-based system into a fast, reliable, and fair digital application. It works seamlessly on any Android device and boasts impressive features.
-
----
-
-## 🌟 About the Developer
-
-This project was conceived and developed by **Biruk Tadesse**, a passionate and detail-oriented **Computer Science and Engineering (CSE) student**.
-
-> As a developer, I specialize in creating practical, user-centric solutions to real-world problems. My expertise lies in both **web and mobile application development**, with a strong focus on building responsive, efficient, and robust systems from the ground up. This project showcases my ability to handle front-end design (HTML/CSS), complex client-side logic (JavaScript), and backend integration with modern cloud services like Firebase. I am driven by the challenge of turning complex requirements into simple, elegant, and functional software.
+This project was built from the ground up to solve critical inefficiencies in the university's manual, paper-based system, especially during power outages. It provides a fast, reliable, and fair digital solution that can run on any device with a modern web browser, including laptops, tablets, and mobile phones.
 
 ---
 
-## ✨ Key Features
+## 🌟 About The Developer
 
-This isn't just a simple logging app; it's a comprehensive system built for reliability and efficiency.
+This project was conceived and developed by **Biruk Tadesse**, a passionate and detail-oriented student from the **Computer Science and Engineering (CSE)** department.
 
--   **🚀 Real-time Synchronization:** Powered by **Google Firebase (Firestore)**, multiple operators can work on different devices simultaneously. All data is instantly synced to a central server, making it **impossible for a student to eat twice** at different entry points.
--   **🔌 100% Offline-First Functionality:** The app remains fully operational during network outages. All entries are securely saved on the device and automatically synchronized with the server the moment connectivity is restored.
--   **🌍 Multi-Language Support:** A fully translated interface provides native support for **English, Afaan Oromoo, and Amharic**.
--   **🔒 Secure ID Entry:** Student IDs are entered in a strict `0000/XX` format, with the year optionally lockable for consistent data entry.
--   **🔔 Visual & Auditory Alerts:** The app provides clear visual feedback (green for success, red with vibration for errors) and audible alerts for successful entries and re-eating attempts.
--   **🎨 Modern & Responsive UI/UX:** Features a clean, intuitive interface that adapts beautifully to any screen size.
--   **🔄 Easy Data Management:** Local data is persistent and syncs automatically. A simple menu allows for language switching, time setting, and clearing local data.
+> As a developer, I specialize in architecting and building practical, user-centric solutions to real-world problems. My expertise spans the full development lifecycle of **Web Applications, Mobile Applications, and Desktop Software**. This project is a testament to my ability to handle responsive front-end design (HTML/CSS), implement complex client-side logic (Vanilla JavaScript), and integrate with modern, scalable cloud backends like Google Firebase. I am driven by the challenge of turning complex requirements into simple, elegant, and highly functional software that makes a tangible impact.
+
+---
+
+## ✨ Core Features & In-Depth Look
+
+This isn't just a simple logging app; it's a comprehensive system architected for resilience and multi-user efficiency.
+
+### 🚀 **Real-time, Multi-Operator Synchronization**
+The system is powered by **Google Firebase (Firestore)**. This allows multiple cafeteria operators to work simultaneously on different devices at various entry points.
+- When an operator registers a student ID, the data is instantly sent to the central server.
+- The server immediately checks if that ID has already been logged for the current meal session (Breakfast, Lunch, or Dinner).
+- This makes it **impossible for a student to eat twice** by going to different registration lines. All devices are always in sync.
+
+### 🔌 **100% Offline-First Functionality**
+Understanding the reality of inconsistent power and internet, the app was built with a robust offline-first architecture.
+- **Works Perfectly Without Internet:** The application remains fully functional even during complete network outages.
+- **Automatic Data Sync:** All entries made while offline are securely saved on the device's local cache. The moment connectivity is restored, the application automatically and intelligently syncs all the offline data to the central server in the background.
+
+### 🌍 **Full Multi-Language Support**
+To ensure accessibility for all users, the interface provides complete and native support for three languages:
+-   **English**
+-   **Afaan Oromoo**
+-   **አማርኛ (Amharic)**
+Users can switch between languages at any time from the settings menu, and the entire interface, including all text and messages, will update instantly.
+
+### 🎨 **Modern & Intuitive User Experience (UI/UX)**
+The system was designed to be easy to learn and fast to operate.
+-   **Dynamic Theming:** A beautiful **Dark Mode** and **Light Mode** can be toggled to ensure comfortable viewing in any lighting condition.
+-   **Rich Feedback:** The app provides immediate feedback for every action. Successful entries are confirmed with a green message and a pleasant sound, while re-eating attempts trigger a red, shaking message accompanied by a distinct alert sound and a haptic **vibration** on mobile devices.
+-   **Clean & Responsive Design:** The layout is clean, professional, and fully responsive, adapting perfectly to any screen size, from a large desktop monitor to a small mobile phone.
+
+### ⚙️ **Advanced Settings & Controls**
+A comprehensive side menu (☰) gives operators full control:
+-   **Meal Session Selection:** Easily switch between **Breakfast, Lunch, and Dinner** databases.
+-   **Year Lock:** Set a default year (e.g., `/16`) and lock it to speed up data entry.
+-   **Data Management:** A "Clear All Data" function with a confirmation step provides a secure way to reset local settings.
+-   **In-App Help & About:** Detailed information about the system and its usage is available directly within the app.
 
 ---
 
 ## 📸 Screenshots
 
-*(Replace the placeholder URLs with the actual URLs of your screenshots hosted on GitHub.)*
+*(Drag and drop your screenshot images into a GitHub Issue comment to get the URLs, then paste them here.)*
 
-| Welcome & Session Select | Main Entry Screen |
+| Welcome Screen (with Snow Effect) | Session Selection |
 | :---: | :---: |
-| ![Welcome Screen]([YOUR_SCREENSHOT_URL_FOR_WELCOME_SCREEN]) | ![Main Entry Screen]([YOUR_SCREENSHOT_URL_FOR_MAIN_SCREEN]) |
+| ![Welcome Screen]([YOUR_SCREENSHOT_URL_HERE_1]) | ![Session Select]([YOUR_SCREENSHOT_URL_HERE_2]) |
 
-| Dark Mode & Side Menu | Re-eating Attempts Log |
+| Main Entry Screen (Light Mode) | Main Entry Screen (Dark Mode) |
 | :---: | :---: |
-| ![Dark Mode]([YOUR_SCREENSHOT_URL_FOR_DARK_MODE]) | ![Attempts Log]([YOUR_SCREENSHOT_URL_FOR_ATTEMPTS_LOG]) |
+| ![Main Light]([YOUR_SCREENSHOT_URL_HERE_3]) | ![Main Dark]([YOUR_SCREENSHOT_URL_HERE_4]) |
+
+| Side Menu & Re-eating Log |
+| :---: |
+| ![Side Menu & Log]([YOUR_SCREENSHOT_URL_HERE_5]) |
 
 ---
 
 ## 🛠️ Technology Stack
 
-This project was built using a modern and efficient technology stack:
+This project was built using a modern, efficient, and scalable technology stack:
 
-*   **Web Frontend:** HTML5, CSS3, Vanilla JavaScript (ES6+)
-*   **Android App:** Java (Android Studio) with WebView integration
-*   **Backend & Real-time Database:** Google Firebase (Firestore, Authentication)
-*   **Version Control:** Git & GitHub
+-   **Frontend:**
+    -   **HTML5:** For the semantic structure of the application.
+    -   **CSS3:** For all styling, including responsive design (Media Queries) and dynamic theming (CSS Variables).
+    -   **Vanilla JavaScript (ES6+):** For all client-side logic, DOM manipulation, and interaction with the backend. No frameworks were used, ensuring the app is lightweight and fast.
+
+-   **Backend & Real-time Database:**
+    -   **Google Firebase (Firestore):** Used as the central NoSQL database for real-time data synchronization and offline data persistence.
+
+-   **Version Control & Hosting:**
+    -   **Git & GitHub:** For source code management and project documentation.
 
 ---
 
-## 🚀 Getting Started
+## 🚀 Installation & Setup Guide (How to Run on a New Computer)
 
-### 1. Running the Web Application
+Follow these steps to get the web application running on your local machine.
 
-The core of the application is a web app. You can run this directly in any modern browser.
+1.  **Prerequisites:**
+    -   A modern web browser (like Chrome, Firefox).
+    -   A code editor (like VS Code).
 
-1.  **Clone the repository:**
-    ```bash
-    git clone https://github.com/your-github-username/bhu-cafeteria-website.git
+2.  **Clone the Repository:**
+    Open your terminal or command prompt and run the following command:
+    ```sh
+    git clone https://github.com/birru2217/bhu-cafeteria-website.git
     ```
-    *(Replace `your-github-username` with your actual GitHub username.)*
-2.  **Navigate to the project folder:**
-    ```bash
+
+3.  **Navigate to the Project Folder:**
+    ```sh
     cd bhu-cafeteria-website
     ```
-3.  **Open `index.html`** in your web browser.
 
-### 2. Building the Android App (`.apk`)
-
-For a native mobile experience, you can build an Android app.
-
-1.  **Prerequisites:** You must have [Android Studio](https://developer.android.com/studio) installed.
-2.  **Clone the Android app repository:**
-    ```bash
-    git clone https://github.com/your-github-username/bhu-cafeteria-android-app.git
-    ```
-    *(Replace `your-github-username` with your actual GitHub username. If you haven't created a separate repo for the Android app, you can clone the main one and find the Android project within it.)*
-3.  **Open the project** in Android Studio.
-4.  **Add Firebase SDK:** Follow the instructions in `README.md` and the `script.js` file to integrate your `google-services.json` and add the necessary Firebase dependencies in your `build.gradle` files.
-5.  **Build the Signed APK:**
-    *   In Android Studio, go to **Build > Generate Signed Bundle / APK...**
-    *   Select **APK** and click **Next**.
-    *   In the "Generate Signed APK" screen, make sure your **Keystore** is selected (or create a new one).
-    *   **Crucially, change the Build Variant from `debug` to `release`.**
-    *   Click **Finish**.
-6.  **Install the APK:** Find the `app-release.apk` file in your project's `app/build/outputs/apk/release/` folder and install it on your Android device via USB, Bluetooth, or any file-sharing method.
+4.  **Run the Application:**
+    Simply open the **`index.html`** file in your web browser. That's it! The application is fully client-side and requires no additional build steps to run.
 
 ---
 
-## 🔗 Links
+## 📱 Android Application
 
-Here are direct links to the developer's profiles and project resources:
+A dedicated Android version of this project, which wraps this web application in a `WebView`, is also available. This provides a more native experience for mobile users.
 
--   **YouTube:** [Jomore Tech](https://www.youtube.com/@jomoreekoo)
--   **Facebook:** [Biruk Tadesse](https://www.facebook.com/profile.php?id=61564927622966)
--   **Telegram (Owner):** [@Brex2217](https://t.me/Brex2217)
--   **Telegram (Group):** [BHU Students](https://t.me/BHU_Info_col_9)
+➡️ **[View the Android App Repository Here](https://github.com/birru2217/bhu-cafeteria-android-app)** *(This will be the link to your second repository once you create it)*
 
 ---
-
-### **Firebase Setup Summary**
-
-To ensure real-time data synchronization and offline capabilities, follow these steps in your Firebase project:
-
-1.  **Create Firestore Database:**
-    *   Go to Firebase Console -> Your Project -> Firestore Database.
-    *   Click **Create database**.
-    *   Select **"Start in test mode"**.
-    *   Choose a **location** (e.g., `eur3 (Europe)`) and click **Enable**.
-2.  **Configure Security Rules:**
-    *   In Firestore, go to the **Rules** tab.
-    *   Replace the existing rules with the following to allow read/write access (for development):
-        ```
-        rules_version = '2';
-        service cloud.firestore {
-          match /databases/{database}/documents {
-            match /{document=**} {
-              allow read, write: if true;
-            }
-          }
-        }
-        ```
-    *   Click **Publish**.
-3.  **Add Web App SDK:**
-    *   In Firebase Project Settings, scroll down to "Your apps".
-    *   Click the **Android logo** (🤖) to add your Android app.
-    *   Enter your **Package name** (`com.example.bhucafe`).
-    *   Enter your **App nickname** (`Bhu Cafe`).
-    *   Click **Register app**.
-    *   **Download the `google-services.json` file** and place it in your project's `app/` directory.
-    *   **Add Firebase SDKs in `build.gradle.kts (Project: BhuCafe)` and `build.gradle.kts (Module: app)`:**
-        *   Ensure the `com.google.gms.google-services` plugin is applied.
-        *   Add the necessary Firebase libraries (`firebase-analytics`, `firebase-auth`, `firebase-firestore`) in your app-level `build.gradle.kts` file.
-4.  **Test:** Run your application on an emulator or device.
-
-This detailed setup will ensure your application connects to Firebase correctly, enabling real-time data handling and reliable offline persistence.
