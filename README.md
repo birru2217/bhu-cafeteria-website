@@ -52,22 +52,16 @@ A comprehensive side menu (☰) gives operators full control:
 ---
 
 ## 📸 Screenshots
+<img width="1899" height="952" alt="Screenshot 2026-01-02 211838" src="https://github.com/user-attachments/assets/42eb9ca2-62ef-49df-823f-5f37563f4a88" />
+<img width="1897" height="943" alt="Screenshot 2026-01-02 211854" src="https://github.com/user-attachments/assets/1f6f42d1-8d9d-4048-a6e4-febce5875748" />
+<img width="1919" height="885" alt="Screenshot 2026-01-02 211920" src="https://github.com/user-attachments/assets/d0b36f3a-e4f5-4fdd-b107-6b723f11a4f2" />
+<img width="1919" height="882" alt="Screenshot 2026-01-02 211933" src="https://github.com/user-attachments/assets/97e923cf-3d81-4d69-b61b-13ce9cfb307d" />
+<img width="1903" height="886" alt="Screenshot 2026-01-02 212023" src="https://github.com/user-attachments/assets/8b0234bd-9818-4498-9e6b-a6bbeae2086b" />
+<img width="1919" height="885" alt="Screenshot 2026-01-02 212034" src="https://github.com/user-attachments/assets/1ac6f3e3-d3b3-4247-93c9-2873e334aa68" />
+<img width="1919" height="947" alt="Screenshot 2026-01-02 212051" src="https://github.com/user-attachments/assets/e6116c87-6ee2-4bd0-8cb7-31a5979d2a7e" />
+<img width="1900" height="956" alt="Screenshot 2026-01-02 212130" src="https://github.com/user-attachments/assets/3aea7d04-4388-4faf-aaa3-da9c99d20665" />
 
-*(Drag and drop your screenshot images into a GitHub Issue comment to get the URLs, then paste them here.)*
 
-| Welcome Screen (with Snow Effect) | Session Selection |
-| :---: | :---: |
-| ![Welcome Screen]([YOUR_SCREENSHOT_URL_HERE_1]) | ![Session Select]([YOUR_SCREENSHOT_URL_HERE_2]) |
-
-| Main Entry Screen (Light Mode) | Main Entry Screen (Dark Mode) |
-| :---: | :---: |
-| ![Main Light]([YOUR_SCREENSHOT_URL_HERE_3]) | ![Main Dark]([YOUR_SCREENSHOT_URL_HERE_4]) |
-
-| Side Menu & Re-eating Log |
-| :---: |
-| ![Side Menu & Log]([YOUR_SCREENSHOT_URL_HERE_5]) |
-
----
 
 ## 🛠️ Technology Stack
 
